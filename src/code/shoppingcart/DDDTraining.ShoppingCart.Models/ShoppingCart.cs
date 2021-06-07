@@ -10,6 +10,17 @@ namespace DDDTraining.ShoppingCart.Models
     public class ShoppingCart
     {
         /// <summary>
+        /// Unique (meaningless) Id for a cart.
+        /// even if never transacted, the cart may be saved for later retrieval or for analysis.
+        /// </summary>
+        public string Id {get; set;}
+
+        /// <summary>
+        /// Status from Created to Transacted/Abandonned/InError
+        /// </summary>
+        public int Status { get; set; }
+
+        /// <summary>
         /// Associated customer (once customer has signed in)
         /// May not exist when the first item is added to the cart.
         /// May not be required at time of checkout.

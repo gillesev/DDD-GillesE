@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDTraining.ShoppingCart.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDTraining.ECommerce.SharedModels", "..\framework\DDDTraining.ECommerce.SharedModels\DDDTraining.ECommerce.SharedModels.csproj", "{386DA1CF-BCA1-4B87-9932-54B23B136B4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDTraining.ShoppingCart.Data", "DDDTraining.ShoppingCart.Data\DDDTraining.ShoppingCart.Data.csproj", "{08B7E530-8A14-4499-BDB4-002DF3E77B52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{386DA1CF-BCA1-4B87-9932-54B23B136B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{386DA1CF-BCA1-4B87-9932-54B23B136B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{386DA1CF-BCA1-4B87-9932-54B23B136B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B7E530-8A14-4499-BDB4-002DF3E77B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B7E530-8A14-4499-BDB4-002DF3E77B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B7E530-8A14-4499-BDB4-002DF3E77B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B7E530-8A14-4499-BDB4-002DF3E77B52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

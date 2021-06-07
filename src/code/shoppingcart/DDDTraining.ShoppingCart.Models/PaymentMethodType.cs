@@ -11,18 +11,18 @@ namespace DDDTraining.ShoppingCart.Models
         /// <summary>
         /// Represents a Credit Card such as VISA, Master Card, Dinner's Club ETC...
         /// </summary>
-        public const int CreditCard = 1;
+        public const int CreditCard = 0;
         /// <summary>
         /// Represents a Debit Card
         /// </summary>
-        public const int DebitCard = 2;
+        public const int DebitCard = 1;
         /// <summary>
         /// Represents a Retailer Issued Credit Card
         /// </summary>
-        public const int PrivateLabel = 3;
+        public const int PrivateLabel = 2;
         /// <summary>
         /// Represents a Retailer Issued Gift Card
         /// </summary>
-        public const int GiftCard = 4;
+        public const int GiftCard = 3;
     }
 }

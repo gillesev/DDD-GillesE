@@ -1,5 +1,5 @@
 ﻿using DDDTraining.ShoppingCart.Models;
-using System;
+using System.Threading.Tasks;
 
 namespace DDDTraining.ShoppingCart.Services
 {
@@ -44,7 +44,7 @@ namespace DDDTraining.ShoppingCart.Services
         /// <param name="sku">Product SKU to be added to the cart</param>
         /// <param name="quantity">Quantity being purchased</param>
         /// <returns>Updated shopping cart</returns>
-        DDDTraining.ShoppingCart.Models.ShoppingCart AddItem(int sku, int quantity, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
+        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> AddItemAsync(int sku, int quantity, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
 
         /// <summary>
         /// Updates a line item's quantity and recomputes the entire cart.
@@ -52,7 +52,7 @@ namespace DDDTraining.ShoppingCart.Services
         /// <param name="lineNumber">Line Number being updated</param>
         /// <param name="quantity">Updated/New quantity</param>
         /// <returns>Updated shopping cart</returns>
-        DDDTraining.ShoppingCart.Models.ShoppingCart UpdateItem(int lineNumber, int quantity, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
+        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> UpdateItemAsync(int lineNumber, int quantity, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
 
         /// <summary>
         /// Removes a line item from the cart and recomputes the entire cart.
@@ -60,21 +60,21 @@ namespace DDDTraining.ShoppingCart.Services
         /// <param name="lineNumber">Line item to remove from the cart</param>
         /// <param name="cart">Current customer's shopping cart</param>
         /// <returns>Updated shopping cart</returns>
-        DDDTraining.ShoppingCart.Models.ShoppingCart RemoveItem(int lineNumber, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
+        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> RemoveItemAsync(int lineNumber, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
 
         /// <summary>
         /// Links a customer to a shopping cart and recomputes the entire cart.
         /// </summary>
         /// <param name="customerId">Current customer's shopping cart</param>
         /// <returns>Updated shopping cart</returns>
-        DDDTraining.ShoppingCart.Models.ShoppingCart LinkCustomer(string customerId, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
+        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> LinkCustomerAsync(string customerId, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
 
         /// <summary>
         /// Proceeds with cart checkout.
         /// </summary>
         /// <param name="cart">Current customer's shopping cart</param>
         /// <returns>Updated shopping cart</returns>
-        DDDTraining.ShoppingCart.Models.ShoppingCart CheckOut(DDDTraining.ShoppingCart.Models.ShoppingCart cart);
+        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> CheckOutAsync(DDDTraining.ShoppingCart.Models.ShoppingCart cart);
 
         /// <summary>
         /// Applies a payment to the cart and recomputes Amount Due.
@@ -83,13 +83,13 @@ namespace DDDTraining.ShoppingCart.Services
         /// <param name="payment">A payment being applied against the cart</param>
         /// <param name="cart">Current customer's shopping cart</param>
         /// <returns>Updated shopping cart</returns>
-        DDDTraining.ShoppingCart.Models.ShoppingCart ApplyPayment(string customerId, ShoppingCartPayment payment, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
+        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> ApplyPaymentAsync(string customerId, ShoppingCartPayment payment, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
 
         /// <summary>
         /// Completes the purchases of the shopping cart and moves the cart to a status of Realized.
         /// </summary>
         /// <param name = "cart" >Current customer's shopping cart</param>
         /// <returns>Updated shopping cart</returns>
-        DDDTraining.ShoppingCart.Models.ShoppingCart CompletePurchase(DDDTraining.ShoppingCart.Models.ShoppingCart cart);
+        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> CompletePurchaseAsync(DDDTraining.ShoppingCart.Models.ShoppingCart cart);
     }
 }
