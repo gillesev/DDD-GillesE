@@ -1,9 +1,9 @@
-namespace DDDTraining.ShoppingCart.Models
+namespace DDDTraining.OrderManagement.Models
 {
     /// <summary>
-    /// Payment applied to a shopping cart during checkout process.
+    /// Payment applied to an order when the order is placed.
     /// </summary>
-    public class ShoppingCartPayment
+    public class RetailOrderPaymentRequest
     {
         /// <summary>
         /// Account used to pay. It may be a customer's account on file or not
@@ -15,8 +15,13 @@ namespace DDDTraining.ShoppingCart.Models
         /// Full/Partial Payment Amount
         /// </summary>
         /// <example>
-        /// 5.73
+        /// 20.00
         /// </example>
         public decimal Amount { get; set; }
+
+        /// <summary>
+        /// Card Verification Code (3 digits in the back of the card)
+        /// </summary>
+        public string CVV { get; set; }
     }
 }

@@ -1,9 +1,9 @@
-namespace DDDTraining.ShoppingCart.Models
+namespace DDDTraining.OrderManagement.Models
 {
     /// <summary>
-    /// Represents a discount applied to an item based on a promotion.
+    /// Represents a discount applied to an item based on a promotion (before taxes)
     /// </summary>
-    public class ShoppingCartItemDiscount
+    public class RetailOrderLineItemDiscount
     {
         /// <summary>
         /// Unique Id for the Promotion qualified at the time the cart was evaluated.
@@ -23,7 +23,7 @@ namespace DDDTraining.ShoppingCart.Models
         public string ShortDescription { get; set; }
 
         /// <summary>
-        /// Computed Amount for the given shopping cart item #.
+        /// Computed Amount for the given item #.
         /// </summary>
         /// <example>
         /// 5.00

@@ -1,4 +1,4 @@
-namespace DDDTraining.ShoppingCart.Models
+namespace DDDTraining.OrderManagement.Models
 {
     /// <summary>
     /// Payment Method Type

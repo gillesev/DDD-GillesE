@@ -65,7 +65,7 @@ namespace DDDTraining.ShoppingCart.Services
         /// <summary>
         /// Links a customer to a shopping cart and recomputes the entire cart.
         /// </summary>
-        /// <param name="customerId">Current customer's shopping cart</param>
+        /// <param name="customerId">Current customer's id (could be primary email)</param>
         /// <returns>Updated shopping cart</returns>
         Task<DDDTraining.ShoppingCart.Models.ShoppingCart> LinkCustomerAsync(string customerId, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
 
@@ -75,21 +75,5 @@ namespace DDDTraining.ShoppingCart.Services
         /// <param name="cart">Current customer's shopping cart</param>
         /// <returns>Updated shopping cart</returns>
         Task<DDDTraining.ShoppingCart.Models.ShoppingCart> CheckOutAsync(DDDTraining.ShoppingCart.Models.ShoppingCart cart);
-
-        /// <summary>
-        /// Applies a payment to the cart and recomputes Amount Due.
-        /// </summary>
-        /// <param name="customerId">Current customer's shopping cart</param>
-        /// <param name="payment">A payment being applied against the cart</param>
-        /// <param name="cart">Current customer's shopping cart</param>
-        /// <returns>Updated shopping cart</returns>
-        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> ApplyPaymentAsync(string customerId, ShoppingCartPayment payment, DDDTraining.ShoppingCart.Models.ShoppingCart cart);
-
-        /// <summary>
-        /// Completes the purchases of the shopping cart and moves the cart to a status of Realized.
-        /// </summary>
-        /// <param name = "cart" >Current customer's shopping cart</param>
-        /// <returns>Updated shopping cart</returns>
-        Task<DDDTraining.ShoppingCart.Models.ShoppingCart> CompletePurchaseAsync(DDDTraining.ShoppingCart.Models.ShoppingCart cart);
     }
 }

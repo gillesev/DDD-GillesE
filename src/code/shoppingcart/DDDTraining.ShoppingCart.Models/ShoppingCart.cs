@@ -34,17 +34,9 @@ namespace DDDTraining.ShoppingCart.Models
         public List<ShoppingCartItem> Items { get; set; }
 
         /// <summary>
-        /// Postal Address the items will be shipped to.
-        /// Determines prices and shipping options.
-        /// Is Required at time of checkout.
+        /// Cart's total amount before taxes
         /// </summary>
-        public PostalAddress ShippingAddress {get; set;}
-
-        /// <summary>
-        /// Payment Amounts applied to the cart. It could be a list as customer could elect to apply some points or 
-        /// a Gift Card balance and pay the remaining amount with his credit card on file.
-        /// </summary>
-        public List<ShoppingCartPayment> AppliedPayments { get; set; }
+        public decimal TotalAmount {get; set;}
 
         /// <summary>
         /// Date/Time at which the cart items and prices was last evaluated in UTC format.

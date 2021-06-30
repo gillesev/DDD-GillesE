@@ -29,34 +29,11 @@ namespace DDDTraining.ShoppingCart.Models
         public int Quantity { get; set; }
 
         /// <summary>
-        /// List of discounts applied at various events: when the item was added to the shopping cart
-        /// based on:
-        /// - the date/time the item was added to the cart,
-        /// or 
-        /// - the customer segmentation
-        /// or
-        /// - the customer's specific method of payment at checkout.
+        /// Total Amount
         /// </summary>
         /// <example>
-        /// Discount Amt=2.50 Desc=Gold -5% for any purchase > $50.00
-        /// Discount Amt=1.00 Desc=XMas Super Saver from 12/01 to 01/31.
+        /// 12.99
         /// </example>
-        public List<ShoppingCartItemDiscount> Discounts { get; set; }
-
-        /// <summary>
-        /// Total Taxes applied (once customer's shipping address is)
-        /// </summary>
-        /// <example>
-        /// 2.76
-        /// </example>
-        public decimal TotalTaxes { get; set; }
-
-        /// <summary>
-        /// Net Total = (Base Price - Promotions) * Quantity + Taxes
-        /// </summary>
-        /// <example>
-        /// 81.34
-        /// </example>        
-        public decimal NetTotal { get; set; }
+        public decimal TotalAmount { get; set; }
     }
 }
