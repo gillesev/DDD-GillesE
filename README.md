@@ -8,7 +8,7 @@ gillese@magenic.com
 # GitHub Repo
 https://github.com/gillesev/DDD-GillesE
 
-# Week 1
+# E-Commerce DDD-GillesE Application - List of sub systems (e.g. domains) at a High Level
 I chose to implement a large e-commerce system with 3 sub systems:
 - shoppingcart: responsible for 
     - maintaining a customer's shopping cart with its items, 
@@ -21,6 +21,7 @@ I chose to implement a large e-commerce system with 3 sub systems:
     - fullfill the order (order translates into 1 or multiple shipments)
     - provide order level/shipment level status
     - send notifications to customer (product no more available, ETC...)
+    - cancel an existing order
 - paymentgateway: responsible for processing payment authorization requests and responses
     - authorize a request
 - inventorymanagement (less knowledgeable) responsible for:
