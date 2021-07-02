@@ -1,15 +1,12 @@
-using DDDTraining.ECommerce.SharedModels;
-using System.Collections.Generic;
-
 namespace DDDTraining.OrderFulfillment.Models
 {
     /// <summary>
     /// Represents a line item in a shipment.
     /// </summary>
     /// <example>
-    /// 3 bottles of Acetominophen
+    /// 2 bottles of Acetominophen
     /// </example>
-    public class OMSShipmentLineItem
+    public class SourcingOrderLineItem
     {
         /// <summary>
         /// Represents a unique increment to distinguish 2 shipment lines
@@ -17,20 +14,22 @@ namespace DDDTraining.OrderFulfillment.Models
         /// <example>
         /// 1
         /// </example>
-        public int ShipmentLineNumber { get; set; }
+        public int LineNumber { get; set; }
 
         /// <summary>
-        /// Represents the product SKU with its shipping/handling properties
-        /// This could be used when processing a partial cancel of an order.
+        /// Associated Customer order's line item
         /// </summary>
-        public OMSOrderLineItem Item { get; set; }
+        /// <example>
+        /// CO Line Number # 2
+        /// </example>
+        public CustomerOrderLineItem CustomerOrderLineItem { get; set; }
 
         /// <summary>
-        /// Quantity shipped <= order's item Sold Quantity.
+        /// Quantity shipped <= PO's item Sold Quantity.
         /// </summary>
         /// <example>
         /// 2
         /// </example>
-        public int Quantity { get; set; } 
+        public int Quantity { get; set; }
     }
 }

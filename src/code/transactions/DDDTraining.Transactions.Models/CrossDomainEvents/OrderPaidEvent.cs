@@ -12,7 +12,7 @@ namespace DDDTraining.Transactions.Models
     /// (receipt template applied on top of the order details) 
     /// 
     /// </summary>
-    public class OrderPaidEvent: IOrderPaidEvent
+    public class OMSOrderPaidEvent: IOrderPaidEvent
     {
         /// <summary>
         /// UTC time stamp when the order event was created. Immutable.

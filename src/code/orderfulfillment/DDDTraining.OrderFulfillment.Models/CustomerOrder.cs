@@ -4,10 +4,15 @@ using System.Collections.Generic;
 namespace DDDTraining.OrderFulfillment.Models
 {
     /// <summary>
-    /// Represents an order placed by a customer.
+    /// Represents a Customer order placed by a customer.
     /// </summary>    
-    public class OMSOrder
+    public class CustomerOrder
     {
+        public CustomerOrder()
+        {
+            this.Status = CustomerOrderStatus.Paid;
+        }
+
         /// <summary>
         /// Unique meaningless order number (unique across the enterprise)
         /// This number is immutable and is provided to the customer (customer receipt)
@@ -18,7 +23,7 @@ namespace DDDTraining.OrderFulfillment.Models
         public string OrderNumber { get; set; }
 
         /// <summary>
-        /// See OMS Order Status
+        /// See Customer Order Status
         /// <summary>
         /// <example>
         /// 2 (Paid)
@@ -34,7 +39,7 @@ namespace DDDTraining.OrderFulfillment.Models
         /// <summary>
         /// List of line items placed in the order.
         /// <summary>
-        public IList<OMSShipmentLineItem> LineItems { get; set; }
+        public IList<CustomerOrderLineItem> LineItems { get; set; }
 
         /// <summary>
         /// Date/Time at which the order was created

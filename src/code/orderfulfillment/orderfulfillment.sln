@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDTraining.OrderFulfillmen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDTraining.ECommerce.SharedModels", "..\framework\DDDTraining.ECommerce.SharedModels\DDDTraining.ECommerce.SharedModels.csproj", "{941E49FC-333A-4033-81C9-31E5261C447D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDTraining.OrderFulFillment.Services", "DDDTraining.OrderFulFillment.Services\DDDTraining.OrderFulFillment.Services.csproj", "{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{941E49FC-333A-4033-81C9-31E5261C447D}.Release|x64.Build.0 = Release|Any CPU
 		{941E49FC-333A-4033-81C9-31E5261C447D}.Release|x86.ActiveCfg = Release|Any CPU
 		{941E49FC-333A-4033-81C9-31E5261C447D}.Release|x86.Build.0 = Release|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Debug|x64.Build.0 = Debug|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Debug|x86.Build.0 = Debug|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Release|x64.ActiveCfg = Release|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Release|x64.Build.0 = Release|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Release|x86.ActiveCfg = Release|Any CPU
+		{A80A5BC1-758B-4C2B-9BD7-EBC047DC2BCB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

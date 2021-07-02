@@ -8,6 +8,6 @@ namespace DDDTraining.ECommerce.SharedModels
         /// <summary>
         /// (REQUIRED) unique order number.
         /// </summary>
-        string OrderNumber { get; set; }       
+        string OrderNumber { get; set; }
     }
 }

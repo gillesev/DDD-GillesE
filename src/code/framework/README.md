@@ -5,5 +5,5 @@ Ideally this framework should be semVer versioned+published as Nuget packages to
 
 Apart from a PostalAddress object, it contains only interfaces that can be implemented by other domains and that can be used in API Interface definitions.
 
-One library should probably not contain all these disparate kernels contracts/interfaces but for simplicity they have been all included in this one library.
+One library should probably not contain all these disparate kernels contracts/interfaces but for simplicity they have been all included in this one library (not realistic though).
 

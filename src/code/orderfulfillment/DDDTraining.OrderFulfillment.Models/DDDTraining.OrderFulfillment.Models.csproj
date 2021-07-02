@@ -8,8 +8,4 @@
     <ProjectReference Include="..\..\framework\DDDTraining.ECommerce.SharedModels\DDDTraining.ECommerce.SharedModels.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="CrossDomainEvents\" />
-  </ItemGroup>
-
 </Project>

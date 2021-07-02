@@ -5,8 +5,10 @@ using Microsoft.Extensions.Logging;
 namespace DDDTraining.OrderFulfillment.BackEnd.APIs
 {
     /// <summary>
-    /// Function responsible for processing a new/paid order
-    /// and create the appropriate shippments applying all country/state regulations and shipping time constraints.
+    /// Function responsible for sourcing a new customer order.
+    /// and create the associated sourcing orders (1 to N) based on:
+    /// - Distribution Center Inventory
+    /// - Delivery constraints: delivery Location(s) and delivery due date(s)
     /// </summary>
     public static class OrderFulfillmentProcessor
     {
