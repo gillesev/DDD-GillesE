@@ -1,9 +1,10 @@
-﻿using System;
+using DDDTraining.ECommerce.SharedModels;
+using System.Collections.Generic;
 
-namespace DDDTraining.CustomerHistory.Models
+namespace DDDTraining.Transactions.Models
 {
     /// <summary>
-    /// Represents a Customer identified at the time an order is placed
+    /// Represents a Customer identified at the time he/she starts the shopping cart
     /// </summary>
     /// <remarks>
     /// Customer core information with:
@@ -25,9 +26,6 @@ namespace DDDTraining.CustomerHistory.Models
         /// <summary>
         /// Customer's active Shipping Postal Address
         /// </summary>
-        /// <example>
-        /// 880 Bunny Court, San Marcos CA 92078 - USA
-        /// </example>        
         public PostalAddress ShippingAddress { get; set; }
 
         /// <summary>

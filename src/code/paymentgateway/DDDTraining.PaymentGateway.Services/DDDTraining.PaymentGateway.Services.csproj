@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\framework\DDDTraining.ECommerce.SharedModels\DDDTraining.ECommerce.SharedModels.csproj" />
+    <ProjectReference Include="..\DDDTraining.PaymentGateway.Models\DDDTraining.PaymentGateway.Models.csproj" />
   </ItemGroup>
 
 </Project>

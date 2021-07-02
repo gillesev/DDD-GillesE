@@ -12,7 +12,7 @@ namespace DDDTraining.OrderManagement.Models
     /// <example>
     /// 3 (Exchange)
     /// </example>    
-    public class TransactionType
+    public class PaymentMethod
     {
         /// <summary>
         /// Represents a SALE transaction.

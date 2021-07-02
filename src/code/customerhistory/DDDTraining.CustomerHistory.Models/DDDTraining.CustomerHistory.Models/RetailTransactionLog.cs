@@ -10,7 +10,7 @@ namespace DDDTraining.CustomerHistory.Models
     public class RetailTransactionLog
     {
         /// <summary>
-        /// Transaction Id.
+        /// Transaction Id. Distinct from Order as this could represent a cancel of an order.
         /// </summary>
         /// <example>
         /// 20210627129978945612

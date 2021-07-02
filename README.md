@@ -8,28 +8,38 @@ gillese@magenic.com
 # GitHub Repo
 https://github.com/gillesev/DDD-GillesE
 
-# Week 1
-I chose to implement a large e-commerce system with 3 sub systems:
+# E-Commerce DDD-Training Application
+I chose to implement a imaginary e-commerce system with the following sub systems/domains:
+- transactions: responsible for 
+    - maintaining a customer's shopping cart with its items, 
+    - compute the item/cart prices (apply promotions),
+    - compute the taxes and cart net total,
+    - process customer's payment (checkout)
+    - send customer notifications
+- paymentgateway: responsible for processing payment requests and posting responses
+    - process and authorization
+    - process timeout reversal
+    - voids an authorization
+- orderfulfillment: responsible for creating an order and fullfill the order
+    - create an order as a result of a valid customer transaction (order placed)
+    - fullfill the order (order translates into 1 or multiple shipments)
+    - process the cancel of an order or the partial cancel of an order
+- inventorymanagement (less knowledgeable) responsible for:
+    - update product inventory
+    - compute demand forecasts
+    - create replinishment orders
 - productcatalog: responsible for maintaining which product is active when, prices and (maybe) product relationships.
     - maintain core product features (merchant team actor)
     - activate/terminate a product (merchant team actor)
     - maintain product pricing (pricing team actor)
     - maintain product content management (content mgmt team actor)
-- shoppingcart: responsible for 
-    - maintaining a customer's shopping cart with its items, 
-    - compute the item/cart prices (apply promotions),
-    - compute the taxes and cart net total,
-    - process customer's payment (checkout)
-- ordermanagement: responsible for creating an order and fullfill the order
-    - create an order as a result of a valid customer transaction
-    - fullfill the order (order translates into 1 or multiple shipments)
-    - provide order level/shipment level status
-    - send notifications to customer (product no more available, ETC...)
-- inventorymanagement (less knowledgeable) responsible for:
-    - update product inventory
-    - compute demand forecasts
-    - create replinishment orders
+- customerhistory: responsible for providing customer historical transactions (sales, returns ETC...)
 
-We will therefore concern ourselves with creating 4 separate sub systems with their respective business processes. These sub systems are centered around what business value or process they are enabling, not concepts like SKU, Customer, Order.
+The 3 domains that have been fleshed out are:
+- transactions (shopping cart and order placement)
+- paymentgateway
+- orderfulfillment
 
+Domains expose APIs (vastly json over http) for external consumption but communicate between each other using EVENT messages.
 
+The Framework contains shared Kernels interfaces but should be consumed as a semVer package.
