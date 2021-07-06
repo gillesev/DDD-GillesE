@@ -20,20 +20,19 @@ I chose to implement a imaginary e-commerce system with the following sub system
     - process and authorization
     - process timeout reversal
     - voids an authorization
-- orderfulfillment: responsible for creating an order and fullfill the order
-    - create an order as a result of a valid customer transaction (order placed)
+- orderfulfillment: responsible for creating the customer order and sourcing orders
+    - create a customer order as a result of a retail order/transaction (order placed)
     - fullfill the order (order translates into 1 or multiple shipments)
-    - process the cancel of an order or the partial cancel of an order
-- inventorymanagement (less knowledgeable) responsible for:
-    - update product inventory
-    - compute demand forecasts
-    - create replinishment orders
+    - process full/partial cancellation of a customer order.
+- ordershipping (less knowledgeable) responsible for:
+    - create 1 to N shipments from 1 sourced order
+    - process the cancellation of 1 to N shipments triggered by the cancellation of 1 to N sourced orders.
 - productcatalog: responsible for maintaining which product is active when, prices and (maybe) product relationships.
     - maintain core product features (merchant team actor)
     - activate/terminate a product (merchant team actor)
     - maintain product pricing (pricing team actor)
     - maintain product content management (content mgmt team actor)
-- customerhistory: responsible for providing customer historical transactions (sales, returns ETC...)
+- customerhistory: responsible for providing customer historical retail orders/transactions (sales, returns ETC...)
 
 The 3 domains that have been fleshed out are:
 - transactions (shopping cart and order placement)
