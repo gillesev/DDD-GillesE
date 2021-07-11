@@ -24,10 +24,6 @@ namespace DDDTraining.Transactions.Services
     /// <term>LinkCustomerAsync</term>
     /// <description>Link a customer to an existing shopping cart</description>
     /// </item>
-    /// <item>    
-    /// <term>EvaluateCartAsync</term>
-    /// <description>Re-computes the cart prices</description>
-    /// </item>      
     /// </list>
     /// </summary>
     public interface IShoppingCartService
@@ -72,14 +68,6 @@ namespace DDDTraining.Transactions.Services
         /// <returns>Updated shopping cart</returns>
         Task LinkCustomerAsync(
             string customerId, 
-            DDDTraining.Transactions.Models.ShoppingCart cart);
-
-        /// <summary>
-        /// Reevaluates the cart.
-        /// </summary>
-        /// <param name="cart">Shopping cart being checked out</param>
-        /// <returns>Updated shopping cart</returns>
-        Task EvaluateCartAsync(
             DDDTraining.Transactions.Models.ShoppingCart cart);
     }
 }

@@ -49,11 +49,7 @@ namespace DDDTraining.Transactions.APIs
             // based on adjustments, call AddItemAsync/RemoveItemAsync/UpdateItemAsync
             ShoppingCart cart = new ShoppingCart();
 
-            // STEP 3: like is done for UpsertCartAsync (code to be factored out) eventually,
-            // re-evaluate the cart: call EvaluateCartAsync
-            await this._shoppingCartService.EvaluateCartAsync(cart);
-
-            // STEP 5: use anti-corruption layer to translate the CartUpdateRequestDTO request into the domain objects
+            // STEP 3: use anti-corruption layer to translate the CartUpdateRequestDTO request into the domain objects
             // to compute an order details = final prices (w/o customer discounts), shipping fees, taxes.
             // IF these are not in the CartUpdateRequestDTO request, need to:
             // - fetch customer info for default shipping address on file
@@ -68,7 +64,7 @@ namespace DDDTraining.Transactions.APIs
                 shippingOptions,
                 paymentAllocations);
 
-            // STEP 6, saves the retail order sale with Updated totals, Estimated Taxes and Customer information (NOT DONE)
+            // STEP 4, saves the retail order sale with Updated totals, Estimated Taxes and Customer information (NOT DONE)
             // return CreatedAtAction = 201 (NOT DONE)
             return Ok();
         }

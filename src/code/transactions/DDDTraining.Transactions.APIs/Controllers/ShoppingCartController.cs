@@ -54,10 +54,7 @@ namespace DDDTraining.Transactions.APIs
             int lineNumber = 3;
             await this._shoppingCartService.RemoveItemAsync(lineNumber, cart);
 
-            // STEP 4: re-evaluate the cart: call EvaluateCartAsync
-            await this._shoppingCartService.EvaluateCartAsync(cart);
-
-            // STEP 5
+            // STEP 4
             // saves the cart using a repository pattern (NOT DONE).
 
             // IF new return Created (201) or NoContent (204) but out of scope.
@@ -86,12 +83,11 @@ namespace DDDTraining.Transactions.APIs
             // and fetch product information from productcatalog to obtain prices.
             // based on adjustments, call AddItemAsync/RemoveItemAsync/UpdateItemAsync
             ShoppingCart cart = new ShoppingCart();
+            // call:
+            //await this._shoppingCartService.AddItemAsync();
+            //await this._shoppingCartService.UpdateItemAsync();
 
-            // STEP 3: like is done for UpsertCartAsync (code to be factored out) eventually,
-            // re-evaluate the cart: call EvaluateCartAsync
-            await this._shoppingCartService.EvaluateCartAsync(cart);
-
-            // STEP 5: use anti-corruption layer to translate the CartCheckoutRequestDTO request into the domain objects
+            // STEP 3: use anti-corruption layer to translate the CartCheckoutRequestDTO request into the domain objects
             // to compute an order details = final prices (w/o customer discounts), shipping fees, taxes.
             // IF these are not in the CartUpdateRequestDTO request, need to:
             // - fetch customer info for default shipping address on file
@@ -107,7 +103,7 @@ namespace DDDTraining.Transactions.APIs
                 shippingOptions,
                 paymentAllocations);
 
-            // STEP 6, saves the shopping cart with Updated totals, Estimated Taxes and Customer information.
+            // STEP 4, saves the shopping cart with Updated totals, Estimated Taxes and Customer information.
 
             // Ok or NoContent (204) but out of scope.
             return Ok();

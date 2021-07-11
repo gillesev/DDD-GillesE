@@ -69,6 +69,16 @@ namespace DDDTraining.Transactions.Models
         /// <summary>
         /// Date/Time at which the order was last updated.
         /// </summary>
-        public DateTime UpdateUTCDateTime { get; set; }         
+        public DateTime UpdateUTCDateTime { get; set; }
+
+        void CreateOrder(
+            DDDTraining.Transactions.Models.ShoppingCart cart,
+            PostalAddress shippingAddress,
+            IList<ShippingOptions> shippingOptions,
+            IList<PaymentMethodAllocation> paymentAllocations) {
+            // this method will be creating the entire order details and call into:
+            // - an injected discount service (other domain)
+            // - an injected tax service (other domain)
+        } 
     }
 }
