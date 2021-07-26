@@ -5,27 +5,40 @@ Gilles Eveloy
 gilles.eveloy@softvision.com
 gillese@magenic.com
 
-# Week 1
-I am starting the project from https://github.com/Magenic/DDD
+# GitHub Repo
+https://github.com/gillesev/DDD-GillesE
 
-I can see that 1 business domain exists called eShop which may represent an e-Commerce shopping cart domain.
-However, it is not clear yet what this domain responsabilities are, e.g. what it is that it does.
-IMPORTANT: we need to define what this eShop core APIs are.
+# E-Commerce DDD-Training Application
+I chose to implement a imaginary e-commerce system with the following sub systems/domains:
+- transactions: responsible for 
+    - maintaining a customer's shopping cart with its items, 
+    - compute the item/cart prices (apply promotions),
+    - compute the taxes and cart net total,
+    - process customer's payment (checkout)
+    - send customer notifications
+- paymentgateway: responsible for processing payment requests and posting responses
+    - process and authorization
+    - process timeout reversal
+    - voids an authorization
+- orderfulfillment: responsible for creating the customer order and sourcing orders
+    - create a customer order as a result of a retail order/transaction (order placed)
+    - fullfill the order (order translates into 1 or multiple shipments)
+    - process full/partial cancellation of a customer order.
+- ordershipping (less knowledgeable) responsible for:
+    - create 1 to N shipments from 1 sourced order
+    - process the cancellation of 1 to N shipments triggered by the cancellation of 1 to N sourced orders.
+- productcatalog: responsible for maintaining which product is active when, prices and (maybe) product relationships.
+    - maintain core product features (merchant team actor)
+    - activate/terminate a product (merchant team actor)
+    - maintain product pricing (pricing team actor)
+    - maintain product content management (content mgmt team actor)
+- customerhistory: responsible for providing customer historical retail orders/transactions (sales, returns ETC...)
 
-I can see that the AddressBase & AddressKind are value objects and that is ok.
+The 3 domains that have been fleshed out are:
+- transactions (shopping cart and order placement)
+- paymentgateway
+- orderfulfillment
 
-I am not sure that IPerson as a contact is warranted as could we have a person without being a customer and the interface does not define a firstname/lastname. I would move the contact fields to ICustomer and rid of IPerson.
+Domains expose APIs (vastly json over http) for external consumption but communicate between each other using EVENT messages.
 
-The customer profile seems to be a profile to segment the customer. He effectively can belong to multiple segments. Maybe ICustomerProfile could have a relationship to ICustomer Customer.
-
-ISku represents the catalog product without its price as the price may change frequently.
-
-The ICustomerOrder should point to a list of ICustomerOrderItem and not directly a list of ISku. We are missing a concept of order item which could be:
-
-ICustomerOrderItem {
-    ISku Sku {get; set;}
-    decimal UnitPrice {get; set;}
-    int Quantity {get; set;}
-    decimal TotalPrice {get; set;}
-}
-
+The Framework contains shared Kernels interfaces but should be consumed as a semVer package.

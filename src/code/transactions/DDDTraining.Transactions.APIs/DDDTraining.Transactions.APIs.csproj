@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DDDTraining.Transactions.Models\DDDTraining.Transactions.Models.csproj" />
+    <ProjectReference Include="..\DDDTraining.Transactions.Services\DDDTraining.Transactions.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>
