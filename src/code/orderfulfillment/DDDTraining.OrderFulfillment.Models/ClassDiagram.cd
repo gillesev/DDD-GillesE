@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DDDTraining.OrderFulfillment.Models.CustomerOrder">
+    <Position X="0.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIEAAAAAAAAAAACAAAAAAAAABCAAAAgAAAAAAA=</HashCode>
+      <FileName>CustomerOrder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="LineItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DDDTraining.OrderFulfillment.Models.CustomerOrderLineItem">
+    <Position X="7.75" Y="0.5" Width="2.25" />
+    <AssociationLine Name="ShippingAddress" Type="DDDTraining.ECommerce.SharedModels.PostalAddress" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="1.812" />
+        <Point X="6.562" Y="1.812" />
+        <Point X="6.562" Y="2.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.148" Y="0.718" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAkAAAAAA=</HashCode>
+      <FileName>CustomerOrderLineItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ShippingAddress" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DDDTraining.ECommerce.SharedModels.PostalAddress">
+    <Position X="5.25" Y="2.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DDDTraining.OrderFulfillment.Models.SourcingOrder">
+    <Position X="0.75" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAAAACAAAAAAAQAACAACAgAAAAAAA=</HashCode>
+      <FileName>SourcingOrder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SourcingLocation" />
+      <Property Name="CustomerOrder" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="LineItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DDDTraining.OrderFulfillment.Models.DistributionCenter">
+    <Position X="5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DistributionCenter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Location" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DDDTraining.OrderFulfillment.Models.SourcingOrderLineItem">
+    <Position X="7.75" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAgAAAAAA=</HashCode>
+      <FileName>SourcingOrderLineItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CustomerOrderLineItem" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
