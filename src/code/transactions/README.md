@@ -6,8 +6,9 @@ transactions: responsible for
 - placing an order
 - cancel an order
 
+### Diagram
+The domain model is described in DDDTraining.Transactions.Models and is centered around the ShoppingCart and the RetailOrder entities: see ClassDiagram.cd in Visual Studio.
+
 These APIs have been exposed in DDDTraining.Transactions.APIs.
 
-DDDTraining.Transactions.BackEnd.APIs groups all back-end APIs as APIs/Interfaces for intra domain communication (but not to outside world).
-
-The domain model is described in DDDTraining.Transactions.Models and is centered around the ShoppingCart and the RetailOrder entities.
+DDDTraining.Transactions.BackEnd.APIs groups all back-end APIs as APIs/Interfaces for intra domain communication (but not to outside world). 
